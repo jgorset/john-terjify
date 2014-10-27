@@ -2,9 +2,7 @@
 
 Replace "he" and "she" with "John Terje". Not that you would want this.
 
-<div style="text-align: center">
-  <img src="https://raw.githubusercontent.com/jgorset/john-terjify/master/icon128.png">
-</div>
+<img align="center" src="https://raw.githubusercontent.com/jgorset/john-terjify/master/icon128.png">
 
 # I love you
 
