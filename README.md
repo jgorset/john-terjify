@@ -3,7 +3,7 @@
 </p>
   
 <p align="center">
-  Replace <em>he</em> and <em>she</em> with <em>John Terje</em>. Not that you would want this. But I do.
+  Replace <em>he</em> and <em>she</em> with <em>John Terje</em>. Not that you would want that. But I do.
 </p>
 
 # I love you
