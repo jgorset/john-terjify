@@ -1,1 +1,1 @@
-$("body *").replaceText(/ (han|hun|henne|ham) /ig, " John Terje ");
+$("body *").replaceText(/ (he|she|han|hun|henne|ham) /ig, " John Terje ");
