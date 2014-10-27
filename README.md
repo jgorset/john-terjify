@@ -3,7 +3,7 @@
 Replace "he" and "she" with "John Terje". Not that you would want this.
 
 <div style="text-align: center">
-  ![John Terje](https://raw.githubusercontent.com/jgorset/john-terjify/master/icon128.png)
+  <img src="https://raw.githubusercontent.com/jgorset/john-terjify/master/icon128.png">
 </div>
 
 # I love you
