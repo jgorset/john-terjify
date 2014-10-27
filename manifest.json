@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "John Terjify",
+  "description": "John Terjify your browsing experience.",
+  "version": "1.0",
+  "permissions": [],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": [],
+      "js": ["jquery.js", "jquery.replacetext.js", "replace.js"]
+    }
+  ]
+}
