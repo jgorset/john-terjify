@@ -5,29 +5,30 @@ var jtRegex;
 var jtName;
 
 function loadOptions() {
+
 	chrome.storage.sync.get("jtRegex", function(data) {
+		var regexField = document.getElementById("regex");
 		if (data.jtRegex == undefined) {
 			chrome.storage.sync.set({'jtRegex':  defaultRegex}, function() {
-				console.log('Regex saved');
+				regexField.value = defaultRegex;
 			});
 		} else {
 			jtRegex = data.jtRegex;
+
+		  regexField.value = jtRegex;
 		}
-		var regexField = document.getElementById("regex");
-	  regexField.value = jtRegex;
 	});
 
-
 	chrome.storage.sync.get("jtName", function(data) {
+		var nameField = document.getElementById("name");
 		if (data.jtName == undefined) {
 			chrome.storage.sync.set({'jtName': defaultName}, function() {
-				console.log('Name saved');
+			  nameField.value = defaultName;
 			});
 		} else {
 			jtName = data.jtName;
+		  nameField.value = jtName;
 		}
-		var nameField = document.getElementById("name");
-	  nameField.value = jtName;
 	});
 
 }
