@@ -1,39 +1,29 @@
-var defaultName = "John Terje";
-var defaultRegex = ' (he|she|han|hun|henne|ham) ';
-
-function loadOptions() {
-
-	chrome.storage.sync.get("jtRegex", function(data) {
-		var regexField = document.getElementById("regex");
-		regexField.value = data.jtRegex == undefined ? defaultRegex : data.jtRegex;
-	});
-
-	chrome.storage.sync.get("jtName", function(data) {
-		var nameField = document.getElementById("name");
-		nameField.value = data.jtName == undefined ? defaultName : data.jtName;
-	});
-
-}
-
-function saveOptions() {
-	var name = document.getElementById("name").value;
-	chrome.storage.sync.set({'jtName': name}, function() {
-	});
-
-	var regex = document.getElementById("regex").value;
-	chrome.storage.sync.set({'jtRegex': regex}, function() {
-	});
-}
-
-function resetOptions() {
-	chrome.storage.sync.set({'jtName': defaultName}, function() {
-	});
-	chrome.storage.sync.set({'jtRegex': defaultRegex}, function() {
-	});
-	location.reload();
-}
-
 $( document ).ready(function() {
+	var defaultName = "John Terje";
+	var defaultRegex = ' (he|she|han|hun|henne|ham) ';
+
+	var regexField = document.getElementById("regex");
+	var nameField = document.getElementById("name");
+
+	function loadOptions() {
+		chrome.storage.sync.get(["jtRegex", "jtName"], function(data) {
+			regexField.value = data.jtRegex == undefined ? defaultRegex : data.jtRegex;
+			nameField.value = data.jtName == undefined ? defaultName : data.jtName;
+		});
+	}
+
+	function saveOptions() {
+		console.log(nameField)
+		chrome.storage.sync.set({'jtName': nameField.value, 'jtRegex': regexField.value}, function() {
+		});
+	}
+
+	function resetOptions() {
+		chrome.storage.sync.set({'jtName': defaultName, 'jtRegex': defaultRegex}, function() {
+		});
+		location.reload();
+	}
+
 	loadOptions();
 	$('#saveBtn').click(function(){
 		saveOptions();
