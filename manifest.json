@@ -3,12 +3,15 @@
   "name": "John Terjify",
   "description": "John Terjify your browsing experience.",
   "version": "1.0",
-  "permissions": [],
+  "permissions": [
+    "storage"
+  ],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
+  "options_page": "options.html",
   "content_scripts": [
     {
       "matches": ["*://*/*"],
