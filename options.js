@@ -1,12 +1,12 @@
 $( document ).ready(function() {
-  var defaultName = "John Terje";
+  var defaultName = 'John Terje';
   var defaultRegex = ' (he|she|han|hun|henne|ham) ';
 
-  var regexField = document.getElementById("regex");
-  var nameField = document.getElementById("name");
+  var regexField = document.getElementById('regex');
+  var nameField = document.getElementById('name');
 
   function loadOptions() {
-    chrome.storage.sync.get(["jtRegex", "jtName"], function(data) {
+    chrome.storage.sync.get(['jtRegex', 'jtName'], function(data) {
       regexField.value = data.jtRegex == undefined ? defaultRegex : data.jtRegex;
       nameField.value = data.jtName == undefined ? defaultName : data.jtName;
     });
