@@ -13,7 +13,6 @@ $( document ).ready(function() {
   }
 
   function saveOptions() {
-    console.log(nameField)
     chrome.storage.sync.set({'jtName': nameField.value, 'jtRegex': regexField.value}, function() {
     });
   }
