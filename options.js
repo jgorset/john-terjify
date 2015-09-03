@@ -14,15 +14,15 @@ $( document ).ready(function() {
 
   function saveOptions() {
     chrome.storage.sync.set({
-      'jtName': nameField.value,
-      'jtRegex': regexField.value
+      jtName: nameField.value,
+      jtRegex: regexField.value
     }, function() {});
   }
 
   function resetOptions() {
     chrome.storage.sync.set({
-      'jtName': defaultName,
-      'jtRegex': defaultRegex
+      jtName: defaultName,
+      jtRegex: defaultRegex
     }, function() {});
     location.reload();
   }
