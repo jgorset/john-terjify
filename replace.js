@@ -22,6 +22,6 @@ chrome.storage.sync.get(['jtRegex', 'jtName'], function(data) {
 
   $('body *').replaceText(re, ' ' + randomName + ' ');
 
-  // Don't replace form
-  $('body *').find(':not(form):not(input)').replaceText(re, ' ' + randomName + ' ');
+  // Don't replace form for now
+  // $('body *').find(':not(form):not(input)').replaceText(re, ' ' + randomName + ' ');
 });
