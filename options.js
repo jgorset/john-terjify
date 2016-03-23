@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-  var defaultName = 'John Terje';
-  var defaultRegex = ' (he|she|han|hun|henne|ham) ';
+  var defaultName = 'Love, Peace, Rome, Spain, Compassion';
+  var defaultRegex = ' War, Terrorism, Anders Breivik, Violence ';
 
   var regexField = document.getElementById('regex');
   var nameField = document.getElementById('name');

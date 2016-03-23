@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "John Terjify",
-  "description": "John Terjify your browsing experience.",
+  "name": "Substitute",
+  "description": "Replaces any text with a text you provide to enhance your browsing experience.",
   "version": "1.0",
   "permissions": [
     "storage"
@@ -11,7 +11,10 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
   "content_scripts": [
     {
       "matches": ["*://*/*"],
