@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Options - John Terjify</title>
+  <title>Options - Replaces any text with a substitute you provide.</title>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="options.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -10,16 +10,20 @@
 <body>
 <div class="container">
   <img src="icon128.png" alt="" class="center-block">
-  <h1>John Terjify options</h1>
+  <h1>Substitute options</h1>
   <div class="form-group">
-    <label for="name">Name to Replace</label>
+    <label for="name">
+      A comma separated list of words to replace with. Example: 'Love, Peace, Compassion'
+    </label>
     <input type="text" id="name" class="form-control">
   </div>
 
   <div class="form-group">
-    <label for="name">Regex pattern used to replace words</label>
+    <label for="name">A comma separated list of words to be replaced</label>
     <input type="text" id="regex" class="form-control">
-    <p class="help-block">For nerds only. This string is passed into a regular expression like this: "/ **your string here** /ig"</p>
+    <p class="help-block">
+      A comma separated list of words to be replaced. Example: 'Brievik, Terrorist, Terrorism'
+    </p>
   </div>
 
   <br/>
